@@ -20,4 +20,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.movie-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 150px);
+  gap: 2rem;
+  padding: 0.5rem;
+  margin: 0;
+  justify-content: space-around;
+
+  li {
+    margin: 1rem;
+  }
+}
 </style>

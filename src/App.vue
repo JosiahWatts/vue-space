@@ -26,7 +26,7 @@ export default {
 @import "./assets/styles/main.scss";
 
 .app-layout {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
