@@ -1,5 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../views/Home.vue";
+import Movies from "../views/Movies.vue";
+import Browse from '../views/Browse.vue';
 
 const routes = [
   {
@@ -16,6 +18,16 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
+  {
+    path: '/my-movies',
+    name: 'Movies',
+    component: Movies,
+  },
+  {
+    path: '/browse',
+    name: 'Browse',
+    component: Browse
+  }
 ];
 
 const router = createRouter({
