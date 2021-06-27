@@ -1,6 +1,6 @@
 import { onMounted, ref } from 'vue';
 
-export default function useUserMovies() {
+export default function usePopularMovies(page = 1) {
     const movies = ref({});
 
     const fetchOptions = {
@@ -10,17 +10,17 @@ export default function useUserMovies() {
         },
       };
   
-    const getUserMovies = async () => {
-        const result = await fetch("https://api.themoviedb.org/3/movie/popular", fetchOptions);
+    const getPopularMovies = async () => {
+        const result = await fetch(`https://api.themoviedb.org/3/movie/popular?page=${page}`, fetchOptions);
         const json = await result.json();
 
         movies.value = json;
     }
 
-    onMounted(getUserMovies);
+    onMounted(getPopularMovies);
 
       return {
           movies,
-          getUserMovies
+          getUserMovies,
       }
 }

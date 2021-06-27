@@ -1,83 +1,49 @@
 <template>
-  <div class="app">
-    <header class="layout-heading">
-      <h1>VueSpace</h1>
-      <div class="link-container">
-        <router-link class="nav-link" to="/">Home</router-link>
-        <router-link class="nav-link" to="/my-movies">My Movies</router-link>
-        <router-link class="nav-link" event="" to="/browse">Browse</router-link>
-      </div>
-    </header>
+  <div class="app-layout">
+    <AppHeader />
     <div class="layout">
-      <div class="content container">
-        <main>
-          <router-view></router-view>
-        </main>
-      </div>
+      <main class="content">
+        <router-view></router-view>
+      </main>
     </div>
-    <footer>
-      Made with ☕ by
-      <a
-        class="nav-link"
-        href="https://www.github.com/josiahwatts"
-        target="_blank"
-        >Josiah Watts</a
-      >
-    </footer>
+    <AppFooter />
   </div>
 </template>
 
 <script>
-export default {};
+import AppHeader from "./components/layout/AppHeader.vue";
+import AppFooter from "./components/layout/AppFooter.vue";
+
+export default {
+  components: {
+    AppHeader,
+    AppFooter,
+  },
+};
 </script>
 
 <style lang="scss">
 @import "./assets/styles/main.scss";
 
-.app {
+.app-layout {
   max-width: 1100px;
   margin: 0 auto;
-}
-
-.layout-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-top: 2rem;
-
-  h1 {
-    margin-bottom: 0;
-  }
-}
-
-.nav-link {
-  font-weight: 700;
-  margin-right: 1rem;
-  text-decoration: none;
-  color: var(--font-color);
-
-  &.router-link-active {
-    color: var(--primary-500);
-  }
-
-  &:hover {
-    text-decoration: underline;
-    color: var(--primary-600);
-  }
+  padding: 0 1rem;
 }
 
 .layout {
   display: flex;
   margin: 2rem 0;
+  min-height: calc(100vh - 250px);
 
   .content {
     flex: 1;
     background: white;
     border-radius: 8px;
   }
-}
 
-footer {
-  text-align: center;
+  main {
+    min-height: 100%;
+  }
 }
 </style>

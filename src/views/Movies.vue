@@ -1,7 +1,21 @@
 <template>
-  <h1>I'm the movies page!</h1>
+  <MovieList :movies="movies.results" />
 </template>
 
 <script>
-export default {};
+import useUserMovies from "../composables/useUserMovies";
+import MovieList from "../components/MovieList.vue";
+
+export default {
+  setup() {
+    const { movies } = useUserMovies();
+
+    return {
+      movies,
+    };
+  },
+  components: {
+    MovieList,
+  },
+};
 </script>

@@ -13,27 +13,62 @@
     --primary-500: #F97316;
     --primary-600: #EA580C;
     --border-color: #A3A3A3;
-  
-    color: var(--font-color);
-    font-family: "Poppins", sans-serif;
-    line-height: 1.75;
+}
 
-    background-color: var(--background-color);
-  
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      margin-top: 0;
-      font-family: "Lora", serif;
-    }
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
-    h1 { font-size: var(--heading-1); }
-    h2 { font-size: var(--heading-2); }
-    h3 { font-size: var(--heading-3); }
-    h4 { font-size: var(--heading-4); }
-    h5 { font-size: var(--heading-5); }
-    h6 { font-size: var(--base); }
+body {
+  line-height: 1.75;
+  color: var(--font-color);
+  background-color: var(--background-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-family: "Lora", serif;
+}
+
+h1 { font-size: var(--heading-1); }
+h2 { font-size: var(--heading-2); }
+h3 { font-size: var(--heading-3); }
+h4 { font-size: var(--heading-4); }
+h5 { font-size: var(--heading-5); }
+h6 { font-size: var(--base); }
+
+button {
+  min-width: 100px;
+}
+
+.nav-link {
+  font-weight: 700;
+  margin-right: 1rem;
+  text-decoration: none;
+  color: var(--font-color);
+
+  &.router-link-active {
+    color: var(--primary-500);
+  }
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--primary-600);
+  }
+}
+
+input[type="text"] {
+  color: inherit;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--border-color);
+  border-radius: 4px;
+  outline: none;
+  padding: 10px 8px;
 }
