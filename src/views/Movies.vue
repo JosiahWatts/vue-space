@@ -1,4 +1,5 @@
 <template>
+  <p v-if="loading">Loading...</p>
   <MovieList :movies="movies.results" />
 </template>
 
@@ -8,10 +9,11 @@ import MovieList from "../components/MovieList.vue";
 
 export default {
   setup() {
-    const { movies } = useUserMovies();
+    const { movies, loading } = useUserMovies();
 
     return {
       movies,
+      loading,
     };
   },
   components: {
