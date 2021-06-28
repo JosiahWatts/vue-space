@@ -17,7 +17,7 @@ const routes = [
     path: '/my-movies/movie/:movieId',
     name: 'Movie',
     component: Movie,
-    props: route => ({ movieId: route.params.movieId })
+    props: route => ({ movieId: route.params.movieId }),
   },
   {
     path: '/browse',
