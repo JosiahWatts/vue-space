@@ -1,7 +1,7 @@
 <template>
   <p v-if="loading">Loading...</p>
 
-  <div class="details-wrapper">
+  <div v-if="!loading" class="details-wrapper">
     <section class="movie-details-container">
       <div class="poster-container">
         <img
@@ -30,8 +30,8 @@
       <h5>Reviews:</h5>
       <Review :review="mockReview" />
       <div class="review-button-container">
-        <a href="#" class="nav-link reviews-link">Read all reviews</a>
-        <a href="#" class="nav-link reviews-link">Write a review</a>
+        <a href="#" class="nav-link reviews-link" disabled>Read all reviews</a>
+        <a href="#" class="nav-link reviews-link" disabled>Write a review</a>
       </div>
     </section>
   </div>

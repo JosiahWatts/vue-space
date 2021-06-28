@@ -109,6 +109,7 @@ export default {
   list-style: none;
   padding: 0;
   min-width: 12rem;
+  z-index: 50;
   box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
 }
 

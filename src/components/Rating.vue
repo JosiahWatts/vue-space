@@ -24,16 +24,19 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 
 export default {
-  setup(context) {
+  setup(_, context) {
     const rating = ref(-1);
 
     const rate = (index) => {
       rating.value = index;
-      context.emit("on-rating", rating.value);
     };
+
+    watch(rating, () => {
+      context.emit("on-rating-selected", rating.value);
+    });
 
     return {
       rating,

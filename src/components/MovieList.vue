@@ -24,9 +24,9 @@ export default {
 .movie-list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 150px);
+  grid-template-columns: repeat(auto-fill, 150px);
   gap: 2rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   margin: 0;
   justify-content: space-around;
 
