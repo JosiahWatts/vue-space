@@ -13,6 +13,7 @@ export default {
   props: {
     movies: Array,
   },
+
   components: {
     MovieListItem,
   },

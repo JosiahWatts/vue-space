@@ -27,11 +27,12 @@
 import { ref } from "vue";
 
 export default {
-  setup() {
+  setup(context) {
     const rating = ref(-1);
 
     const rate = (index) => {
       rating.value = index;
+      context.emit("on-rating", rating.value);
     };
 
     return {
