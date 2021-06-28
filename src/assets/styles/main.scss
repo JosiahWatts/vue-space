@@ -67,6 +67,14 @@ p {
   }
 }
 
+.input-group {
+  label {
+    display: block;
+    font-size: var(--small);
+    font-weight: 500;
+  }
+}
+
 input[type="text"] {
   color: inherit;
   border-style: solid;

@@ -4,7 +4,7 @@
     <div class="link-container">
       <router-link class="nav-link" to="/">Home</router-link>
       <router-link class="nav-link" to="/my-movies">My Movies</router-link>
-      <router-link class="nav-link" event="" to="/browse">Browse</router-link>
+      <router-link class="nav-link" event="" to="/browse">Search</router-link>
     </div>
   </header>
 </template>
